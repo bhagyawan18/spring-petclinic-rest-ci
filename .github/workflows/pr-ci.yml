@@ -21,5 +21,10 @@ jobs:
           java-version: 17
           cache: maven
 
+      - name: Start Redis
+        uses: supercharge/redis-github-action@1.8.0
+        with:
+          redis-version: 7
+
       - name: Build and run tests
         run: mvn clean verify
