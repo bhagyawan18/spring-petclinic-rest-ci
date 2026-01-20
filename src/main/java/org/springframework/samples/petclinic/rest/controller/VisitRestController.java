@@ -61,7 +61,7 @@ public class VisitRestController implements VisitsApi {
         }
         return new ResponseEntity<>(new ArrayList<>(visitMapper.toVisitsDto(visits)), HttpStatus.OK);
     }
-    assertEquals(1, 2);
+    
 
 
     @PreAuthorize("hasRole(@roles.OWNER_ADMIN)")
