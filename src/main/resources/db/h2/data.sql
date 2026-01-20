@@ -30,6 +30,14 @@ INSERT INTO types (name) VALUES
 ('bird'),
 ('hamster');
 
+INSERT INTO pet_types (name) VALUES
+('cat'),
+('dog'),
+('lizard'),
+('snake'),
+('bird'),
+('hamster');
+
 -- Insert Owners
 INSERT INTO owners (first_name, last_name, address, city, telephone) VALUES 
 ('George', 'Franklin', '110 W. Liberty St.', 'Madison', '6085551023'),

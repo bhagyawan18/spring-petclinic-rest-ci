@@ -22,6 +22,8 @@ import org.springframework.samples.petclinic.model.*;
 import org.springframework.samples.petclinic.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.cache.annotation.Cacheable;
+
 
 import java.util.Collection;
 import java.util.List;
@@ -133,6 +135,7 @@ public class ClinicServiceImpl implements ClinicService {
     }
 
     @Override
+    @Cacheable(value = "pettypes", key = "'all'")
     @Transactional(readOnly = true)
     public Collection<PetType> findAllPetTypes() throws DataAccessException {
         return petTypeRepository.findAll();
