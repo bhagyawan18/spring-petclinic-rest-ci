@@ -61,6 +61,8 @@ public class VisitRestController implements VisitsApi {
         }
         return new ResponseEntity<>(new ArrayList<>(visitMapper.toVisitsDto(visits)), HttpStatus.OK);
     }
+    
+
 
     @PreAuthorize("hasRole(@roles.OWNER_ADMIN)")
     @Override
